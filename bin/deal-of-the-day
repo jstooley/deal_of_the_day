@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "Hello World!"
+require './lib/deal_of_the_day'
+
+DealOfTheDay::CLI.new.call

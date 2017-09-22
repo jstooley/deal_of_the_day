@@ -1,5 +1,2 @@
-require "deal_of_the_day/version"
-
-module DealOfTheDay
-  # Your code goes here...
-end
+require_relative "deal_of_the_day/version"
+require_relative 'deal_of_the_day/cli'
