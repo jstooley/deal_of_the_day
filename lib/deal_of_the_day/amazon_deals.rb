@@ -1,0 +1,2 @@
+class DealOfTheDay::AmazonDeals
+end

@@ -1,0 +1,2 @@
+class DealsOfTheDay::SearsDeals
+end
