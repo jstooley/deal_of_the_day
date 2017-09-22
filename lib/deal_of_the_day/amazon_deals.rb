@@ -1,4 +1,6 @@
+require_relative '../deal_of_the_day/print_deal_info/printing.rb'
 class DealOfTheDay::AmazonDeals
+  include PrintDeals
   attr_accessor :name, :price, :percent_off
 
   def self.all_deals
@@ -13,11 +15,5 @@ class DealOfTheDay::AmazonDeals
     computer.percent_off = "25%"
     puts "Amazon deals here"
     [tv,computer]
-  end
-
-  def deal_info
-    puts "#{self.name}"
-    puts "#{self.price}"
-    puts "#{self.percent_off}"    
   end
 end
