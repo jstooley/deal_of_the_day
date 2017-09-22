@@ -1,7 +1,7 @@
 # DealOfTheDay
 
 
-This gem will look for the deals of the day on Amazon.com and sears.com. Then scrape information about the deals and provide it to you.
+This gem will look for the deals of the day on Amazon.com and sears.com. Then scrape information about the deals and provide it to you via the CLI.
 
 ## Installation
 
