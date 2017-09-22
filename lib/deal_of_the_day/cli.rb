@@ -27,6 +27,9 @@ class DealOfTheDay::CLI
       puts "#{i+1}. #{deal}"
     end
   end
+  def deal_info(choice)
+    puts @deals[choice.to_i - 1]
+  end# end of deal_info
 
   def menu(site_choice)
     input = "blank"
@@ -37,7 +40,7 @@ class DealOfTheDay::CLI
           puts "Enter 'back' to choose site again"
           puts "Enter exit to quit"
           input = gets.chomp
-          #amazon_deal_info(input)
+          deal_info(input)
         end
       else
         until input.downcase == "back" || input.downcase == "exit"
@@ -45,7 +48,7 @@ class DealOfTheDay::CLI
           puts "Enter 'back' to choose site again"
           puts "Enter exit to quit"
           input = gets.chomp
-          #sears_deal_info(input)
+          deal_info(input)
         end
       end
 
