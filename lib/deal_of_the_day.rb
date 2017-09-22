@@ -1,5 +1,5 @@
 require "open-uri"
-require "nekogiri"
+require 'nokogiri'
 require "pry"
 
 require_relative "deal_of_the_day/version"

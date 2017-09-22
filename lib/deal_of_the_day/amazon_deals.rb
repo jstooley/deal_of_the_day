@@ -5,10 +5,10 @@ class DealOfTheDay::AmazonDeals
 
   def self.all_deals
     #returns the deals
-    self.scrape_deals
+    self.scraped_deals
   end
 
-  def self.scrape_deals
+  def self.scraped_deals
     deals = []
 
     deals << self.scrape_amazon
@@ -17,6 +17,7 @@ class DealOfTheDay::AmazonDeals
   end
 
   def self.scrape_amazon
-    doc = Nokogiri::HTML(open(https://www.amazon.com/gp/goldbox/ref=nav_cs_gb))
+    doc = Nokogiri::HTML(open("https://amazon.com/gp/goldbox/ref=nav_cs_gb"))
+    binding.pry
   end
 end
