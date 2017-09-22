@@ -4,16 +4,19 @@ class DealOfTheDay::AmazonDeals
   attr_accessor :name, :price, :percent_off
 
   def self.all_deals
-    #will list deals
-    tv = self.new
-    tv.name = 'TV'
-    tv.price = "$130"
-    tv.percent_off = "30%"
-    computer = self.new
-    computer.name = "Comp"
-    computer.price = "$130"
-    computer.percent_off = "25%"
-    puts "Amazon deals here"
-    [tv,computer]
+    #returns the deals
+    self.scrape_deals
+  end
+
+  def self.scrape_deals
+    deals = []
+
+    deals << self.scrape_amazon
+
+    deals
+  end
+
+  def self.scrape_amazon
+    doc = Nokogiri::HTML(open(https://www.amazon.com/gp/goldbox/ref=nav_cs_gb))
   end
 end
