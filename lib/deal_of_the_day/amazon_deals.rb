@@ -14,4 +14,10 @@ class DealOfTheDay::AmazonDeals
     puts "Amazon deals here"
     [tv,computer]
   end
+
+  def deal_info
+    puts "#{self.name}"
+    puts "#{self.price}"
+    puts "#{self.percent_off}"    
+  end
 end

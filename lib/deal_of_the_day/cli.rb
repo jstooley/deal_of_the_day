@@ -28,7 +28,7 @@ class DealOfTheDay::CLI
     end
   end
   def deal_info(choice)
-    puts @deals[choice.to_i - 1]
+    @deals[choice.to_i - 1].deal_info # will print the chosen deals info
   end# end of deal_info
 
   def menu(site_choice)
