@@ -22,13 +22,18 @@ class DealOfTheDay::CLI
   end # call method end
 
   def amazon_deals
-    DealOfTheDay::AmazonDeals.all_deals
+    @amazon_deals = DealOfTheDay::AmazonDeals.all_deals
+    @amazon_deals.each_with_index do |deal, i|
+      puts "#{i+1}. #{deal}"
+    end
   end
 
   def sears_deals
-    DealOfTheDay::SearsDeals.all_deals
+    @sears_deals = DealOfTheDay::SearsDeals.all_deals
+    @sears_deals.each_with_index do |deal, i|
+      puts "#{i+1}. #{deal}"
+    end
   end
-
   def menu(site_choice)
     input = "blank"
 
