@@ -21,14 +21,14 @@ class DealOfTheDay::CLI
     goodbye
   end # call method end
 
-  def amazon_deals
+  def amazon_deals #list all daily deals amazon
     @amazon_deals = DealOfTheDay::AmazonDeals.all_deals
     @amazon_deals.each_with_index do |deal, i|
       puts "#{i+1}. #{deal}"
     end
   end
 
-  def sears_deals
+  def sears_deals #list all deals sears
     @sears_deals = DealOfTheDay::SearsDeals.all_deals
     @sears_deals.each_with_index do |deal, i|
       puts "#{i+1}. #{deal}"
