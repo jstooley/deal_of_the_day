@@ -21,7 +21,7 @@ class DealOfTheDay::CLI
     goodbye
   end # call method end
 
-  def deals(deals)
+  def deals(deals)# prints all deals of a chosen site
     @deals = deals
     @deals.each_with_index do |deal, i|
       puts "#{i+1}. #{deal}"
