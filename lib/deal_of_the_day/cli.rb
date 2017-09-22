@@ -18,7 +18,7 @@ class DealOfTheDay::CLI
         puts "Did not understand command."
       end
     end #while loop end
-    goodbye_message
+    goodbye
   end # call method end
 
   def amazon_deals
@@ -56,12 +56,12 @@ class DealOfTheDay::CLI
     if input.downcase == "back" # goes back to ask to see amazon of sears deals
       call
     else
-      goodbye_message # exits program
+      goodbye # exits program
     end
     
   end # end menu method
 
-  def goodbye_message
+  def goodbye # prints goodbye messages and exits program
     puts "cya later nerd!"
     exit
   end
