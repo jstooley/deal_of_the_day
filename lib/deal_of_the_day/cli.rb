@@ -9,10 +9,10 @@ class DealOfTheDay::CLI
 
       input = gets.chomp
       if input.downcase == "a"
-        amazon_deals
+        deals(DealOfTheDay::AmazonDeals.all_deals)
         menu(input)
       elsif input.downcase == "s"
-        sears_deals
+        deals(DealOfTheDay::SearsDeals.all_deals)
         menu(input)
       elsif input.downcase != "exit"
         puts "Did not understand command."
@@ -21,23 +21,15 @@ class DealOfTheDay::CLI
     goodbye
   end # call method end
 
-  def amazon_deals #list all daily deals amazon
-    @amazon_deals = DealOfTheDay::AmazonDeals.all_deals
-    @amazon_deals.each_with_index do |deal, i|
+  def deals(deals)
+    @deals = deals
+    @deals.each_with_index do |deal, i|
       puts "#{i+1}. #{deal}"
     end
   end
 
-  def sears_deals #list all deals sears
-    @sears_deals = DealOfTheDay::SearsDeals.all_deals
-    @sears_deals.each_with_index do |deal, i|
-      puts "#{i+1}. #{deal}"
-    end
-  end
   def menu(site_choice)
     input = "blank"
-
-
 
       if site_choice.downcase == "a"
         until input.downcase == "back" || input.downcase == "exit"
