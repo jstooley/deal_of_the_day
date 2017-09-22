@@ -36,7 +36,7 @@ class DealOfTheDay::CLI
       
       if site_choice.downcase == "a" 
         until input.downcase == "back" || input.downcase == "exit"
-          puts"What Amazon deals do you want more info on?"
+          puts "What Amazon deals do you want more info on?"
           puts "Enter 'back' to choose site again"
           puts "Enter exit to quit"
           input = gets.chomp
