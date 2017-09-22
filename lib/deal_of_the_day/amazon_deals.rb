@@ -3,7 +3,15 @@ class DealOfTheDay::AmazonDeals
 
   def self.all_deals
     #will list deals
+    tv = self.new
+    tv.name = 'TV'
+    tv.price = "$130"
+    tv.percent_off = "30%"
+    computer = self.new
+    computer.name = "Comp"
+    computer.price = "$130"
+    computer.percent_off = "25%"
     puts "Amazon deals here"
-    ['TV','Computer']
+    [tv,computer]
   end
 end

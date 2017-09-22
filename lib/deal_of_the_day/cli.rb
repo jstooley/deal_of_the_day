@@ -24,7 +24,7 @@ class DealOfTheDay::CLI
   def deals(deals)# prints all deals of a chosen site
     @deals = deals
     @deals.each_with_index do |deal, i|
-      puts "#{i+1}. #{deal}"
+      puts "#{i+1}. #{deal.name}"
     end
   end
   def deal_info(choice)
