@@ -1,8 +1,7 @@
 # DealOfTheDay
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/deal_of_the_day`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+This gem will look for the deals of the day on Amazon.com and sears.com. Then scrape information about the deals and provide it to you.
 
 ## Installation
 
