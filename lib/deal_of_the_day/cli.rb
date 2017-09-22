@@ -1,5 +1,5 @@
 class DealOfTheDay::CLI
-  def call
+  def call(input = nil)
     
     while input.downcase != 'exit'
       
@@ -18,6 +18,7 @@ class DealOfTheDay::CLI
         puts "Did not understand command."
       end
     end #while loop end
+    goodbye_message
   end # call method end
 
   def amazon_deals
@@ -29,6 +30,28 @@ class DealOfTheDay::CLI
   end
 
   def menu(site_choice)
+    input = nil
+    while input.downcase != "back" && input.downcase != "exit"
+      
+      if site_choice.downcase == "a" 
+        puts"What Amazon deals do you want more info on?"
+        input = gets.chomp
+        amazon_deal_info(input)
+      else 
+        puts "What sears deals do you want more info on?"
+        input = gets.chomp
+        sears_deal_info(input)
+      end
+    end # end while loop
+    if input.downcase == "back" # goes back to ask to see amazon of sears deals
+      call
+    else
+      call(input) # exits program
+    end
+  end # end menu method
+
+  def goodbye_message
+    puts "cya later nerd!"
   end
   
 end
