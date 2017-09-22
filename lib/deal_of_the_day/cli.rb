@@ -26,7 +26,7 @@ class DealOfTheDay::CLI
   end
 
   def sears_deals
-    DealsOfTheDay::SearsDeals.all_deals
+    DealOfTheDay::SearsDeals.all_deals
   end
 
   def menu(site_choice)
